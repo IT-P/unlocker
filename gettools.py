@@ -135,6 +135,8 @@ def main():
 	try:
 		# Try to get tools from packages folder
 		urlretrieve(urlpost15, convertpath(dest + '/tools/com.vmware.fusion.tools.darwin.zip.tar'))
+		# Check downloaded file
+		tar = tarfile.open(convertpath(dest + '/tools/com.vmware.fusion.tools.darwin.zip.tar'), 'r')
 
 	except:
 		# No tools found, get em from the core tar
